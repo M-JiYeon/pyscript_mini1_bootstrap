@@ -70,6 +70,7 @@
                         <li><a class="dropdown-item" href="/category/3">노란색</a></li>
                         <li><a class="dropdown-item" href="/category/4">초록색</a></li>
                         <li><a class="dropdown-item" href="/category/5">보라색</a></li>
+                        <li><a class="dropdown-item" href="/category/6">기타</a></li>
                     </ul>
                 </div>
                 <div class="col col-md-8 "></div>
@@ -165,6 +166,16 @@
         # category와 sort 값의 기본값을 할당합니다.
         category = 0
         sort = "id"
+        # category 종류에 따라서 표시될 이름을 Dictionary에 할당합니다.
+        category_name = {
+          0: "Category",
+          1: "빨간색",
+          2: "주황색",
+          3: "노란색",
+          4: "초록색",
+          5: "보라색",
+          6: "기타"
+        }
 
         # 상품리스트가 표시될 HTML 태그를 불러옵니다.
         products_wrap = Element("products")
@@ -260,25 +271,13 @@
             sort = event.target.getAttribute("href").split('/')[2]
             render_products()
 
-        # category를 all로 설정하고 products를 다시 렌더링합니다.
-        # def category_all(event):
-        #     event.preventDefault()
-        #     selected_category.write("Category")
-        #     category_all_btn.add_class('text-decoration-underline')
-        #     global category
-        #     category = "all"
-        #     render_products()
-
         # category 값을 지정하고 products를 다시 렌더링합니다.
         def category_filter(event):
             event.preventDefault()
             global category
             category = int(event.target.getAttribute("href").split('/')[2])
             # category_all_btn.remove_class('text-decoration-underline')
-            if category != 0:
-                selected_category.write(category)
-            else:
-                selected_category.write("Category")
+            selected_category.write(category_name.get(category))
             render_products()
 
         # sort 버튼에 onclick 이벤트를 할당합니다.
