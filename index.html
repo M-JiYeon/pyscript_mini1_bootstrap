@@ -158,8 +158,8 @@
         import js
         from pyodide.http import pyfetch
 
-        # request 를 보내는 url을 할당합니다.
-        url = "#"
+        # request 를 보내는 baseurl을 할당합니다.
+        baseURL = 'https://github.com/M-JiYeon/pyscript_miniproject1'
 
         # request로 받아올 데이터를 초기화합니다.
         json_data = []
@@ -203,7 +203,7 @@
 
             # 해당 상품의 정보를 모달에 표시합니다.
             data = json_data[product_id]
-            modal_image.element.src = data.get('image')
+            modal_image.element.src = f"{baseURL}{data.get('image')}"
             modal_image.element.alt = f"{data.get('productname')}_thumbnail"
             modal_productname.write(data.get("productname"))
             modal_price.write(f"￦ {data.get('price')}")
@@ -234,7 +234,7 @@
                 card_item = pyscript.create("div", classes="card h-100")
                 # 썸네일
                 img_item = pyscript.create("img", classes="card-img-top img-fluid thumbnail")
-                img_item.element.src = data.get('image')
+                img_item.element.src = f"{baseURL}{data.get('image')}"
                 img_item.element.alt = f"{data.get('productname')} thumbnail"
                 # 상품명 및 가격
                 detail_wrap = pyscript.create("div", classes="card-box p-4")
@@ -297,287 +297,14 @@
             global json_data
 
             # pyfetch를 통해 데이터를 받아옵니다.
-            # response = await pyfetch(url)
-            # json_data = await response.json()
-
-            # 목데이터
-            json_data = [
-                {
-                    "id": 0,
-                    "productname": "포도",
-                    "rank": 17,
-                    "image": "./images/grape.jpg",
-                    "price": 3000,
-                    "from": "United States of America",
-                    "category": 5
-                },
-                {
-                    "id": 1,
-                    "productname": "복숭아",
-                    "rank": 2,
-                    "image": "./images/peach.jpg",
-                    "price": 1500,
-                    "from": "South Korea",
-                    "category": 1
-                },
-                {
-                    "id": 2,
-                    "productname": "사과",
-                    "rank": 16,
-                    "image": "./images/apple.jpg",
-                    "price": 3500,
-                    "from": "South Korea",
-                    "category": 1
-                },
-                {
-                    "id": 3,
-                    "productname": "오렌지",
-                    "rank": 5,
-                    "image": "./images/orange.jpg",
-                    "price": 1000,
-                    "from": "United States of America",
-                    "category": 2
-                },
-                {
-                    "id": 4,
-                    "productname": "키위",
-                    "rank": 9,
-                    "image": "./images/kiwi.jpg",
-                    "price": 1500,
-                    "from": "United States of America",
-                    "category": 6
-                },
-                {
-                    "id": 5,
-                    "productname": "패션후르츠",
-                    "rank": 3,
-                    "image": "./images/passionfruit.jpg",
-                    "price": 1500,
-                    "from": "Brazil",
-                    "category": 5
-                },
-                {
-                    "id": 6,
-                    "productname": "수박",
-                    "rank": 11,
-                    "image": "./images/watermelon.jpg",
-                    "price": 15000,
-                    "from": "South Korea",
-                    "category": 6
-                },
-                {
-                    "id": 7,
-                    "productname": "귤",
-                    "rank": 30,
-                    "image": "./images/tangerine.jpg",
-                    "price": 2000,
-                    "from": "South Korea",
-                    "category": 2
-                },
-                {
-                    "id": 8,
-                    "productname": "석류",
-                    "rank": 29,
-                    "image": "./images/pomegranate.jpg",
-                    "price": 4000,
-                    "from": "Uzbekistan",
-                    "category": 1
-                },
-                {
-                    "id": 9,
-                    "productname": "딸기",
-                    "rank": 10,
-                    "image": "./images/strawberry.jpg",
-                    "price": 10500,
-                    "from": "South Korea",
-                    "category": 1
-                },
-                {
-                    "id": 10,
-                    "productname": "바나나",
-                    "rank": 7,
-                    "image": "./images/banana.jpg",
-                    "price": 3000,
-                    "from": "United States of America",
-                    "category": 3
-                },
-                {
-                    "id": 11,
-                    "productname": "감",
-                    "rank": 23,
-                    "image": "./images/persimmon.jpg",
-                    "price": 2000,
-                    "from": "South Korea",
-                    "category": 2
-                },
-                {
-                    "id": 12,
-                    "productname": "멜론",
-                    "rank": 26,
-                    "image": "./images/melon.jpg",
-                    "price": 8000,
-                    "from": "China",
-                    "category": 4
-                },
-                {
-                    "id": 13,
-                    "productname": "블루베리",
-                    "rank": 4,
-                    "image": "./images/blueberry.jpg",
-                    "price": 8000,
-                    "from": "South Korea",
-                    "category": 5
-                },
-                {
-                    "id": 14,
-                    "productname": "배",
-                    "rank": 1,
-                    "image": "./images/pear.jpg",
-                    "price": 4000,
-                    "from": "South Korea",
-                    "category": 3
-                },
-                {
-                    "id": 15,
-                    "productname": "라임",
-                    "rank": 21,
-                    "image": "./images/lime.jpg",
-                    "price": 3000,
-                    "from": "Malaysia",
-                    "category": 4
-                },
-                {
-                    "id": 16,
-                    "productname": "토마토",
-                    "rank": 14,
-                    "image": "./images/tomato.jpg",
-                    "price": 2500,
-                    "from": "South Korea",
-                    "category": 1
-                },
-                {
-                    "id": 17,
-                    "productname": "자두",
-                    "rank": 27,
-                    "image": "./images/plum.jpg",
-                    "price": 3500,
-                    "from": "South Korea",
-                    "category": 1
-                },
-                {
-                    "id": 18,
-                    "productname": "망고",
-                    "rank": 28,
-                    "image": "./images/mango.jpg",
-                    "price": 4000,
-                    "from": "Philippines",
-                    "category": 3
-                },
-                {
-                    "id": 19,
-                    "productname": "구아바",
-                    "rank": 13,
-                    "image": "./images/guava.jpg",
-                    "price": 3500,
-                    "from": "Brazil",
-                    "category": 4
-                },
-                {
-                    "id": 20,
-                    "productname": "망고스틴",
-                    "rank": 15,
-                    "image": "./images/mangosteen.jpg",
-                    "price": 3000,
-                    "from": "Thailand",
-                    "category": 5
-                },
-                {
-                    "id": 21,
-                    "productname": "파인애플",
-                    "rank": 22,
-                    "image": "./images/pineapple.jpg",
-                    "price": 9000,
-                    "from": "Hawaii",
-                    "category": 3
-                },
-                {
-                    "id": 22,
-                    "productname": "용과",
-                    "rank": 20,
-                    "image": "./images/dragonfruit.jpg",
-                    "price": 5000,
-                    "from": "Thailand",
-                    "category": 1
-                },
-                {
-                    "id": 23,
-                    "productname": "레몬",
-                    "rank": 6,
-                    "image": "./images/lemon.jpg",
-                    "price": 2500,
-                    "from": "India",
-                    "category": 3
-                },
-                {
-                    "id": 24,
-                    "productname": "체리",
-                    "rank": 18,
-                    "image": "./images/cherry.jpg",
-                    "price": 9500,
-                    "from": "United States of America",
-                    "category": 1
-                },
-                {
-                    "id": 25,
-                    "productname": "애플망고",
-                    "rank": 24,
-                    "image": "./images/applemango.png",
-                    "price": 7000,
-                    "from": "Thailand",
-                    "category": 6
-                },
-                {
-                    "id": 26,
-                    "productname": "코코넛",
-                    "rank": 12,
-                    "image": "./images/coconut.jpg",
-                    "price": 5500,
-                    "from": "Philippines",
-                    "category": 4
-                },
-                {
-                    "id": 27,
-                    "productname": "아보카도",
-                    "rank": 25,
-                    "image": "./images/avocado.jpg",
-                    "price": 4500,
-                    "from": "Mexico",
-                    "category": 4
-                },
-                {
-                    "id": 28,
-                    "productname": "리치",
-                    "rank": 19,
-                    "image": "./images/lychee.jpg",
-                    "price": 2000,
-                    "from": "India",
-                    "category": 1
-                },
-                {
-                    "id": 29,
-                    "productname": "파파야",
-                    "rank": 8,
-                    "image": "./images/papaya.jpg",
-                    "price": 2500,
-                    "from": "Thailand",
-                    "category": 3
-                }
-            ]
+            response = await pyfetch(url)
+            json_data = await response.json()
+            
             # 사이트 로딩시에 받아온 데이터를 기반으로 렌더링합니다.
             render_products()
 
         # pyscript 실행시 데이터를 받아옵니다.
-        asyncio.ensure_future(request(url))
+        asyncio.ensure_future(request(baseURL+'/raw/main/fruit_data.json'))
     </py-script>
 
 </body>
