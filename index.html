@@ -207,7 +207,7 @@
             modal_image.element.alt = f"{data.get('productname')}_thumbnail"
             modal_productname.write(data.get("productname"))
             modal_price.write(f"￦ {data.get('price')}")
-            modal_description.write(f"It's a good quality and cheap {data.get('productname')}. It's from the {data.get('from')}.")
+            modal_description.write(f"품질 좋고 값싼 {data.get('productname')}입니다. 원산지는 {data.get('from')}입니다.")
 
         def render_products():
             # 상품 카드들을 렌더링하는 함수입니다.
