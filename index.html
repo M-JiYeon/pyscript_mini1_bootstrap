@@ -153,15 +153,17 @@
             </div>
         </div>
     </div>
+    <py-config>
+        [[fetch]]
+        from = "./data/"
+        files = ['fruit_data.json']
+    </py-config>
     <py-script>
         import asyncio
-        import js
-        from pyodide.http import pyfetch
+        import json
+        from pyodide.http import open_url
 
-        # request 를 보내는 baseurl을 할당합니다.
-        baseURL = 'https://github.com/M-JiYeon/pyscript_miniproject1'
-
-        # request로 받아올 데이터를 초기화합니다.
+        # 데이터를 초기화합니다.
         json_data = []
         # category와 sort 값의 기본값을 할당합니다.
         category = 0
@@ -203,7 +205,7 @@
 
             # 해당 상품의 정보를 모달에 표시합니다.
             data = json_data[product_id]
-            modal_image.element.src = f"{baseURL}{data.get('image')}"
+            modal_image.element.src = data.get('image')
             modal_image.element.alt = f"{data.get('productname')}_thumbnail"
             modal_productname.write(data.get("productname"))
             modal_price.write(f"￦ {data.get('price')}")
@@ -234,7 +236,7 @@
                 card_item = pyscript.create("div", classes="card h-100")
                 # 썸네일
                 img_item = pyscript.create("img", classes="card-img-top img-fluid thumbnail")
-                img_item.element.src = f"{baseURL}{data.get('image')}"
+                img_item.element.src = data.get('image')
                 img_item.element.alt = f"{data.get('productname')} thumbnail"
                 # 상품명 및 가격
                 detail_wrap = pyscript.create("div", classes="card-box p-4")
@@ -284,27 +286,24 @@
         for btn in sort_btns:
             btn.element.onclick = sort_products
 
-        # category-all 버튼에 onclick 이벤트를 할당합니다.
-        # category_all_btn.element.onclick = category_all
-
         # category-select 버튼에 onclick 이벤트를 할당합니다.
         for btn in category_btn:
             btn.onclick = category_filter
 
         # 지정된 url로 요청을 보내서 json_data에 담고 렌더링합니다.
-        async def request(url):
+        def get_data():
             # json_data를 재활용하기 위해 global로 선언합니다.
             global json_data
 
-            # pyfetch를 통해 데이터를 받아옵니다.
-            response = await pyfetch(url)
-            json_data = await response.json()
-            
-            # 사이트 로딩시에 받아온 데이터를 기반으로 렌더링합니다.
+            # fruit_data.json에서 데이터를 받아옵니다.
+            with open('fruit_data.json', 'r') as f:
+                json_data = json.load(f)
+
+            # 데이터를 기반으로 렌더링합니다.
             render_products()
 
         # pyscript 실행시 데이터를 받아옵니다.
-        asyncio.ensure_future(request(baseURL+'/raw/main/fruit_data.json'))
+        get_data()
     </py-script>
 
 </body>
