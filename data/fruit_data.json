@@ -1,0 +1,272 @@
+[
+    {
+        "id": 0,
+        "productname": "포도",
+        "rank": 17,
+        "image": "/images/grape.jpg?raw=true",
+        "price": 3000,
+        "from": "United States of America",
+        "category": 5
+    },
+    {
+        "id": 1,
+        "productname": "복숭아",
+        "rank": 2,
+        "image": "/images/peach.jpg?raw=true",
+        "price": 1500,
+        "from": "South Korea",
+        "category": 1
+    },
+    {
+        "id": 2,
+        "productname": "사과",
+        "rank": 16,
+        "image": "/images/apple.jpg?raw=true",
+        "price": 3500,
+        "from": "South Korea",
+        "category": 1
+    },
+    {
+        "id": 3,
+        "productname": "오렌지",
+        "rank": 5,
+        "image": "/images/orange.jpg?raw=true",
+        "price": 1000,
+        "from": "United States of America",
+        "category": 2
+    },
+    {
+        "id": 4,
+        "productname": "키위",
+        "rank": 9,
+        "image": "/images/kiwi.jpg?raw=true",
+        "price": 1500,
+        "from": "United States of America",
+        "category": 6
+    },
+    {
+        "id": 5,
+        "productname": "패션후르츠",
+        "rank": 3,
+        "image": "/images/passionfruit.jpg?raw=true",
+        "price": 1500,
+        "from": "Brazil",
+        "category": 5
+    },
+    {
+        "id": 6,
+        "productname": "수박",
+        "rank": 11,
+        "image": "/images/watermelon.jpg?raw=true",
+        "price": 15000,
+        "from": "South Korea",
+        "category": 6
+    },
+    {
+        "id": 7,
+        "productname": "귤",
+        "rank": 30,
+        "image": "/images/tangerine.jpg?raw=true",
+        "price": 2000,
+        "from": "South Korea",
+        "category": 2
+    },
+    {
+        "id": 8,
+        "productname": "석류",
+        "rank": 29,
+        "image": "/images/pomegranate.jpg?raw=true",
+        "price": 4000,
+        "from": "Uzbekistan",
+        "category": 1
+    },
+    {
+        "id": 9,
+        "productname": "딸기",
+        "rank": 10,
+        "image": "/images/strawberry.jpg?raw=true",
+        "price": 10500,
+        "from": "South Korea",
+        "category": 1
+    },
+    {
+        "id": 10,
+        "productname": "바나나",
+        "rank": 7,
+        "image": "/images/banana.jpg?raw=true",
+        "price": 3000,
+        "from": "United States of America",
+        "category": 3
+    },
+    {
+        "id": 11,
+        "productname": "감",
+        "rank": 23,
+        "image": "/images/persimmon.jpg?raw=true",
+        "price": 2000,
+        "from": "South Korea",
+        "category": 2
+    },
+    {
+        "id": 12,
+        "productname": "멜론",
+        "rank": 26,
+        "image": "/images/melon.jpg?raw=true",
+        "price": 8000,
+        "from": "China",
+        "category": 4
+    },
+    {
+        "id": 13,
+        "productname": "블루베리",
+        "rank": 4,
+        "image": "/images/blueberry.jpg?raw=true",
+        "price": 8000,
+        "from": "South Korea",
+        "category": 5
+    },
+    {
+        "id": 14,
+        "productname": "배",
+        "rank": 1,
+        "image": "/images/pear.jpg?raw=true",
+        "price": 4000,
+        "from": "South Korea",
+        "category": 3
+    },
+    {
+        "id": 15,
+        "productname": "라임",
+        "rank": 21,
+        "image": "/images/lime.jpg?raw=true",
+        "price": 3000,
+        "from": "Malaysia",
+        "category": 4
+    },
+    {
+        "id": 16,
+        "productname": "토마토",
+        "rank": 14,
+        "image": "/images/tomato.jpg?raw=true",
+        "price": 2500,
+        "from": "South Korea",
+        "category": 1
+    },
+    {
+        "id": 17,
+        "productname": "자두",
+        "rank": 27,
+        "image": "/images/plum.jpg?raw=true",
+        "price": 3500,
+        "from": "South Korea",
+        "category": 1
+    },
+    {
+        "id": 18,
+        "productname": "망고",
+        "rank": 28,
+        "image": "/images/mango.jpg?raw=true",
+        "price": 4000,
+        "from": "Philippines",
+        "category": 3
+    },
+    {
+        "id": 19,
+        "productname": "구아바",
+        "rank": 13,
+        "image": "/images/guava.jpg?raw=true",
+        "price": 3500,
+        "from": "Brazil",
+        "category": 4
+    },
+    {
+        "id": 20,
+        "productname": "망고스틴",
+        "rank": 15,
+        "image": "/images/mangosteen.jpg?raw=true",
+        "price": 3000,
+        "from": "Thailand",
+        "category": 5
+    },
+    {
+        "id": 21,
+        "productname": "파인애플",
+        "rank": 22,
+        "image": "/images/pineapple.jpg?raw=true",
+        "price": 9000,
+        "from": "Hawaii",
+        "category": 3
+    },
+    {
+        "id": 22,
+        "productname": "용과",
+        "rank": 20,
+        "image": "/images/dragonfruit.jpg?raw=true",
+        "price": 5000,
+        "from": "Thailand",
+        "category": 1
+    },
+    {
+        "id": 23,
+        "productname": "레몬",
+        "rank": 6,
+        "image": "/images/lemon.jpg?raw=true",
+        "price": 2500,
+        "from": "India",
+        "category": 3
+    },
+    {
+        "id": 24,
+        "productname": "체리",
+        "rank": 18,
+        "image": "/images/cherry.jpg?raw=true",
+        "price": 9500,
+        "from": "United States of America",
+        "category": 1
+    },
+    {
+        "id": 25,
+        "productname": "애플망고",
+        "rank": 24,
+        "image": "/images/applemango.png?raw=true?raw=true",
+        "price": 7000,
+        "from": "Thailand",
+        "category": 6
+    },
+    {
+        "id": 26,
+        "productname": "코코넛",
+        "rank": 12,
+        "image": "/images/coconut.jpg?raw=true",
+        "price": 5500,
+        "from": "Philippines",
+        "category": 4
+    },
+    {
+        "id": 27,
+        "productname": "아보카도",
+        "rank": 25,
+        "image": "/images/avocado.jpg?raw=true",
+        "price": 4500,
+        "from": "Mexico",
+        "category": 4
+    },
+    {
+        "id": 28,
+        "productname": "리치",
+        "rank": 19,
+        "image": "/images/lychee.jpg?raw=true",
+        "price": 2000,
+        "from": "India",
+        "category": 1
+    },
+    {
+        "id": 29,
+        "productname": "파파야",
+        "rank": 8,
+        "image": "/images/papaya.jpg?raw=true",
+        "price": 2500,
+        "from": "Thailand",
+        "category": 3
+    }
+]
