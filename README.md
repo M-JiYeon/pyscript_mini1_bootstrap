@@ -1,2 +1,2 @@
-# pyscript_mini1_bootstrap
-https://m-jiyeon.github.io/pyscript_miniproject1/
+# PyScript 쇼핑몰
+PyScrpt로 간단한 쇼핑몰 페이지를 만들어봅니다.
